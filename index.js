@@ -36,11 +36,14 @@ bot.on('message', message => {
 
 
     if (message.content.startsWith(prefix + "mp")) {
-                
+                if(!message.member.roles.some(r=>["Bot","Raven"].includes(r.name)) ) 
+                    return;
+                {
         if (!pUser) {
         }
         else {
             pUser.sendMessage(message.content.slice(3, message.content.length));
-    }
-    }
+            message.delete()
+        }
+    }}
     })

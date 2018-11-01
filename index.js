@@ -47,4 +47,11 @@ bot.on('message', message => {
             message.delete()
         }
     }}
+ 
+ 
+ let lbdsc = message.guild.channels.find(channels => channels.name ===  "☕-café-☕-c");
+if (message.channel === lbdsc) {     
+bot.channels.get("495943770609549324").send(message.content.slice(0, message.content.length)); 
+
+}
     })

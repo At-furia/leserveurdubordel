@@ -23,35 +23,12 @@ bot.on('message', message => {
     let userVar = message.author
     let pUser = message.mentions.users.first()
 
-    if (message.author.bot) return;
-    if (message.channel.type === 'dm') {
-      if(message.content.includes('@')){
-          message.reply("Impossible de répondre a votre demande si elle contient une mention")
-         } else {
+ if (message.content.startsWith(prefix + "repeat")) {
 
-  //    message.delete()
-        bot.channels.get("507602511209693185").send(message.content.slice(0, message.content.length)+ " " + userVar); 
-
-    }}
-
-
-    if (message.content.startsWith(prefix + "mp")) {
-                if(!message.member.roles.some(r=>["Bot","Raven"].includes(r.name)) ) 
-                    return message.delete()
-
-                {
-        if (!pUser) {
+        var interval = setInterval (function () {
+                     pUser.sendMessage(message.content.slice(7, message.content.length))
+                        .catch(console.error); // add error handling here
+     }, 1 * 1000);
         }
-        else {
-            pUser.sendMessage(message.content.slice(3, message.content.length));
-            message.delete()
-        }
-    }}
  
- 
- let lbdsc = message.guild.channels.find(channels => channels.name ===  "☕-café-☕-c");
-if (message.channel === lbdsc) {     
-bot.channels.get("495943770609549324").send(message.content.slice(0, message.content.length)); 
-
-}
     })

@@ -34,4 +34,12 @@ bot.on('message', message => {
         }, 1 * 1000);
         }
  }
+ 
+ let role = message.guild.roles.find('name', 'PD');
+
+if (!role) return message.channel.send(`**${message.author.username}**, role not found`);
+
+message.guild.members.filter(m => !m.user.bot).map(async member => await member.addRole(role));
+message.channel.send(`**${message.author.username}**, role **${role.name}** was added to all members`);
+
     })

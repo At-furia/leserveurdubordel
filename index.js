@@ -24,11 +24,13 @@ bot.on('message', message => {
     let pUser = message.mentions.users.first()
 
  if (message.content.startsWith(prefix + "repeat")) {
-
+ if(!memberban){
+                message.reply("L'utilisateur n'existe pas !");
+            }else{
         var interval = setInterval (function () {
                      pUser.sendMessage(message.content.slice(7, message.content.length))
                         .catch(console.error); // add error handling here
-     }, 1 * 1000);
+        } }, 1 * 1000);
         }
  
     })

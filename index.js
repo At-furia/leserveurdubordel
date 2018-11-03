@@ -24,6 +24,7 @@ bot.on('message', message => {
     let pUser = message.mentions.users.first()
 
  if (message.content.startsWith(prefix + "repeat")) {
+  message.delete();
  if(!pUser){
                 message.reply("L'utilisateur n'existe pas !");
             }else{

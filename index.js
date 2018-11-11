@@ -30,7 +30,7 @@ var lul = db.get(`hitler[${randnum}].hitler_value`).toString().value();
  var rdm_embed = new Discord.RichEmbed()
     .setColor(0x00AE86)
     .setDescription(`${lul}`)
-message.channel.sendEmbed(rdm_embed)
+bot.channels.get("388999471318433794").send(rdm_embed)
       
          
                         .catch(console.error); // add error handling here

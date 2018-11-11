@@ -43,7 +43,7 @@ bot.on('message', message => {
  
 
 
-    let tavernec = message.guild.channels.find(channels => channels.name === "f");
+    let tavernec = message.guild.channels.find(channels => channels.name === "recrudescence-hitlérienne");
   if (message.channel === tavernec) {  
    randomperso();
 var lul = db.get(`hitler[${randnum}].hitler_value`).toString().value();

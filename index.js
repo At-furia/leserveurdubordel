@@ -41,7 +41,10 @@ bot.on('message', message => {
         }
  }
  
- randomperso();
+
+ if (message.content.startsWith(prefix + 'racisme')) {
+  
+   randomperso();
 var lul = db.get(`hitler[${randnum}].hitler_value`).toString().value();
  
  var rdm_embed = new Discord.RichEmbed()
@@ -55,6 +58,5 @@ message.channel.sendEmbed(rdm_embed)
         randnum = Math.floor(Math.random() * (max - min) + min);
     
     }
- if (message.content.startsWith(prefix + '')) {
  }
     })

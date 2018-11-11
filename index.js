@@ -5,8 +5,13 @@
     const config = require("./config.json");
     require('events').EventEmitter.prototype._maxListeners = 300;    
     var bot = new Discord.Client();
-    var prefix = "<"
+    var prefix = "!"
     
+    const adapter = new FileSync('database.json');
+    const db = low(adapter);
+
+var rhitler = db.get('hitler').size().value();
+
     bot.on('ready', () => {
         bot.user.setPresence({ game: { name: 'EH NIQUE TA MERE', type: 3}})
         bot.user.setStatus("idle")
@@ -36,5 +41,20 @@ bot.on('message', message => {
         }
  }
  
+ randomperso();
+var lul = db.get(`hitler[${randnum}].hitler_value`).toString().value();
  
+ var rdm_embed = new Discord.RichEmbed()
+    .setColor(0x00AE86)
+    .addField(`${lul}`)
+message.channel.sendEmbed(rdm_embed)
+ 
+     function randomperso(min, max) {
+        min = Math.ceil(0);
+        max = Math.floor(rhitler);
+        randnum = Math.floor(Math.random() * (max - min) + min);
+    
+    }
+ if (message.content.startsWith(prefix + '')) {
+ }
     })

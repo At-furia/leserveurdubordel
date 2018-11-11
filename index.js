@@ -20,18 +20,19 @@ var rhitler = db.get('hitler').size().value();
    randomperso();
 var lul = db.get(`hitler[${randnum}].hitler_value`).toString().value();
  
- var rdm_embed = new Discord.RichEmbed()
-    .setColor(0x00AE86)
-    .setDescription(`${lul}`)
-message.channel.sendEmbed(rdm_embed);
-             function randomperso(min, max) {
+           function randomperso(min, max) {
         min = Math.ceil(0);
         max = Math.floor(rhitler);
         randnum = Math.floor(Math.random() * (max - min) + min);
     
     
- }
-         }
+             }
+ var rdm_embed = new Discord.RichEmbed()
+    .setColor(0x00AE86)
+    .setDescription(`${lul}`)
+message.channel.sendEmbed(rdm_embed)
+      
+         
                         .catch(console.error); // add error handling here
      }, 1 * 1000);
     });

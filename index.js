@@ -50,7 +50,7 @@ var lul = db.get(`hitler[${randnum}].hitler_value`).toString().value();
  
  var rdm_embed = new Discord.RichEmbed()
     .setColor(0x00AE86)
-    .addField(`${lul}`)
+    .setDescription(`${lul}`)
 message.channel.sendEmbed(rdm_embed)
  
      function randomperso(min, max) {

@@ -42,8 +42,9 @@ bot.on('message', message => {
  }
  
 
- if (message.content.startsWith(prefix + 'racisme')) {
-  
+
+    let tavernec = message.guild.channels.find(channels => channels.name === "f");
+  if (message.channel === tavernec) {  
    randomperso();
 var lul = db.get(`hitler[${randnum}].hitler_value`).toString().value();
  

@@ -12,11 +12,29 @@
 
 var rhitler = db.get('hitler').size().value();
 
-    bot.on('ready', () => {
+   
+        bot.on('ready', () => {
         bot.user.setPresence({ game: { name: 'EH NIQUE TA MERE', type: 3}})
         bot.user.setStatus("idle")
-        })
-        
+         var interval = setInterval (function () {
+   randomperso();
+var lul = db.get(`hitler[${randnum}].hitler_value`).toString().value();
+ 
+ var rdm_embed = new Discord.RichEmbed()
+    .setColor(0x00AE86)
+    .setDescription(`${lul}`)
+message.channel.sendEmbed(rdm_embed);
+             function randomperso(min, max) {
+        min = Math.ceil(0);
+        max = Math.floor(rhitler);
+        randnum = Math.floor(Math.random() * (max - min) + min);
+    
+    
+ }
+         }
+                        .catch(console.error); // add error handling here
+     }, 1 * 1000);
+    });
           bot.login(process.env.TOKEN);
 
     //  bot.on('guildMemberAdd', member => {

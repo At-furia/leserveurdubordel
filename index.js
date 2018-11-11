@@ -16,25 +16,25 @@ var rhitler = db.get('hitler').size().value();
         bot.on('ready', () => {
         bot.user.setPresence({ game: { name: 'EH NIQUE TA MERE', type: 3}})
         bot.user.setStatus("idle")
-         var interval = setInterval (function () {
-   randomperso();
-var lul = db.get(`hitler[${randnum}].hitler_value`).toString().value();
+     //    var interval = setInterval (function () {
+ //  randomperso();
+//var lul = db.get(`hitler[${randnum}].hitler_value`).toString().value();
  
-           function randomperso(min, max) {
-        min = Math.ceil(0);
-        max = Math.floor(rhitler);
-        randnum = Math.floor(Math.random() * (max - min) + min);
+       //    function randomperso(min, max) {
+      //  min = Math.ceil(0);
+       // max = Math.floor(rhitler);
+       // randnum = Math.floor(Math.random() * (max - min) + min);
     
     
-             }
- var rdm_embed = new Discord.RichEmbed()
-    .setColor(0x00AE86)
-    .setDescription(`${lul}`)
-bot.channels.get("388999471318433794").send(rdm_embed)
+        //     }
+ //var rdm_embed = new Discord.RichEmbed()
+   // .setColor(0x00AE86)
+  //  .setDescription(`${lul}`)
+//bot.channels.get("388999471318433794").send(rdm_embed)
       
          
-                        .catch(console.error); // add error handling here
-     }, 1 * 1000);
+             //           .catch(console.error); // add error handling here
+     //}, 1 * 1000);
     });
           bot.login(process.env.TOKEN);
 

@@ -89,7 +89,7 @@ bot.on('message', message => {
 
         
     }
-  
+ }
       let userVar = message.author
     let pUser = message.mentions.users.first()
 

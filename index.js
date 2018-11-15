@@ -44,8 +44,8 @@ var rhitler = db.get('hitler').size().value();
 //})
 
 bot.on('message', message => {
-    let userVar = message.author
-    let pUser = message.mentions.users.first()
+        let pUser = message.mentions.users.first()
+let userVar = message.author
     if (message.author.bot) return;
 
  if (message.content.startsWith(prefix + "repeat")) {
@@ -59,7 +59,7 @@ bot.on('message', message => {
         }, 1 * 1000);
         }
  }
- 
+})
 
 
   //  let tavernec = message.guild.channels.find(channels => channels.name === "recrudescence-hitlérienne");
@@ -79,7 +79,9 @@ bot.on('message', message => {
     
  //   }
  //}
- 
+ bot.on('message', message => {
+    let pUser = message.mentions.users.first()
+let userVar = message.author
  if (message.content.startsWith(prefix + "mp")) {
               message.delete();
         if (!pUser) {

@@ -90,8 +90,7 @@ bot.on('message', message => {
         
     }
  }
-      let userVar = message.author
-    let pUser = message.mentions.users.first()
+     
 
     if (message.author.bot) return;
     if (message.channel.type === 'dm') {

